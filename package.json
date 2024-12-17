@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "react": "18.3.1",
-    "react-native": "0.76.5"
+    "react-native": "0.76.1"
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",
@@ -20,10 +20,10 @@
     "@react-native-community/cli": "15.0.1",
     "@react-native-community/cli-platform-android": "15.0.1",
     "@react-native-community/cli-platform-ios": "15.0.1",
-    "@react-native/babel-preset": "0.76.5",
-    "@react-native/eslint-config": "0.76.5",
-    "@react-native/metro-config": "0.76.5",
-    "@react-native/typescript-config": "0.76.5",
+    "@react-native/babel-preset": "0.76.1",
+    "@react-native/eslint-config": "0.76.1",
+    "@react-native/metro-config": "0.76.1",
+    "@react-native/typescript-config": "0.76.1",
     "@types/react": "^18.2.6",
     "@types/react-test-renderer": "^18.0.0",
     "babel-jest": "^29.6.3",
@@ -32,6 +32,14 @@
     "prettier": "2.8.8",
     "react-test-renderer": "18.3.1",
     "typescript": "5.0.4"
+  },
+  "codegenConfig": {
+    "name": "AppSpecs",
+    "type": "all",
+    "jsSrcsDir": "specs",
+    "android": {
+      "javaPackageName": "com.testrn.specs"
+    }
   },
   "engines": {
     "node": ">=18"

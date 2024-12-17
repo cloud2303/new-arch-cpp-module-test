@@ -5,9 +5,10 @@
  * @format
  */
 
-import React from 'react';
+import React, {useEffect} from 'react';
 import type {PropsWithChildren} from 'react';
 import {
+  Button,
   SafeAreaView,
   ScrollView,
   StatusBar,
@@ -24,6 +25,7 @@ import {
   LearnMoreLinks,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
+import NativeSampleModule from './specs/NativeSampleModule';
 
 type SectionProps = PropsWithChildren<{
   title: string;
@@ -61,6 +63,10 @@ function App(): React.JSX.Element {
   const backgroundStyle = {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
   };
+  useEffect(() => {
+    let str = NativeSampleModule?.reverseString('hello');
+    console.log(str);
+  }, []);
 
   return (
     <SafeAreaView style={backgroundStyle}>
@@ -72,6 +78,13 @@ function App(): React.JSX.Element {
         contentInsetAdjustmentBehavior="automatic"
         style={backgroundStyle}>
         <Header />
+        <Button
+          title="Click me"
+          onPress={() => {
+            let str = NativeSampleModule?.reverseString('hello');
+            console.log(str);
+          }}
+        />
         <View
           style={{
             backgroundColor: isDarkMode ? Colors.black : Colors.white,
